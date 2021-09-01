@@ -12,7 +12,7 @@ searchBtn.addEventListener('click',function(){
     console.log(inputVal);
     booksDiv.textContent =''
     Errors.textContent = ''
-    fetch(`http://openlibrary.org/search.json?q=${inputVal}`) //fetching data
+    fetch(`https://openlibrary.org/search.json?q=${inputVal}`) //fetching data
     .then(res => res.json())
     .then(data => displayBook(data.docs));   //get the data and passing in function
      
