@@ -9,7 +9,7 @@ const Errors = document.getElementById('result');
 searchBtn.addEventListener('click',function(){
     const inputVal = inputField.value;
     inputField.value = '';
-    console.log(inputVal);
+    // console.log(inputVal);
     booksDiv.textContent =''
     Errors.textContent = ''
     fetch(`https://openlibrary.org/search.json?q=${inputVal}`) //fetching data
@@ -19,7 +19,7 @@ searchBtn.addEventListener('click',function(){
 })
 
 const displayBook = (books)=> {
-    console.log(books);
+    // console.log(books);
     if (books.length===0) {   //checking if the search result is exist or not
         Errors.innerText = "NO Result Found"
     }
